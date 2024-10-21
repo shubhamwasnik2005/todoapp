@@ -6,11 +6,9 @@ import Note from "./Note";
 
 function App(){
   return <div><Header />
-  <Note /> 
-  <Note /> 
-  <Note /> 
-  <Note /> 
-  <Note /> 
+  <Note head="Card one heading" para = "this is paragraph"/> 
+  <Note head="Card second heading" para = "this is second paragraph"/> 
+  
   <Footer />
   </div>
 };
