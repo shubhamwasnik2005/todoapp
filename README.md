@@ -1,2 +1,1 @@
-# todoapp
-This is to test the push
+This is todo application
