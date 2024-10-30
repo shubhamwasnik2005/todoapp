@@ -5,10 +5,6 @@ import Note from "./Note";
 import CreateArea from "./createArea";
 import React from "react";
 
-function noteUpdate(noteVal){
-  return <Note head={noteVal.title} para={noteVal.content}></Note>
-
-}
 
 
 function App(){
@@ -20,10 +16,21 @@ function App(){
     })
   };
 
+
+  function deleteNote(id){
+    setItems(prevItems=>{
+      return prevItems.filter((noteItem,index)=>{
+        return index !==id;
+      })
+    })
+  };
+
   return <div><Header />
   <CreateArea onAdd={addItems}/>
   
-  {items.map(noteUpdate)}
+  {items.map((noteVal,index)=>{
+  return <Note key={index} id=
+  {index} head={noteVal.title} para={noteVal.content} onDelete={deleteNote}></Note>})}
   
   <Footer />
   </div>
